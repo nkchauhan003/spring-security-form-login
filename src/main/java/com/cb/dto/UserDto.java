@@ -14,6 +14,7 @@ import javax.validation.constraints.NotEmpty;
 @AllArgsConstructor
 public class UserDto {
     private Long id;
+
     @NotEmpty(message = "Please enter valid name.")
     private String name;
 
