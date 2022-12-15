@@ -2,9 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
 
     <title>Registration</title>
 </head>
@@ -25,26 +25,26 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
-                    <p th:errors="*{name}" class="text-danger"
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" id="name" name="name" type="text">
+                    <p class="text-danger" th:errors="*{name}"
                        th:if="${#fields.hasErrors('name')}"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email">
-                    <p th:errors="*{email}" class="text-danger"
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" name="email" type="email">
+                    <p class="text-danger" th:errors="*{email}"
                        th:if="${#fields.hasErrors('email')}"></p>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="col-sm-2 col-form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password">
-                    <p th:errors="*{password}" class="text-danger"
+                    <label class="col-sm-2 col-form-label" for="password">Password</label>
+                    <input class="form-control" id="password" name="password" type="password">
+                    <p class="text-danger" th:errors="*{password}"
                        th:if="${#fields.hasErrors('password')}"></p>
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary mb-3">Register</button>
-                    or <a th:href="@{/login}" class="link-primary">Login</a>
+                    <button class="btn btn-primary mb-3" type="submit">Register</button>
+                    or <a class="link-primary" th:href="@{/login}">Login</a>
                 </div>
             </form>
         </div>
@@ -52,9 +52,9 @@
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

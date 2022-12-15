@@ -51,6 +51,4 @@ public class LoginController {
         userService.saveUser(userDto);
         return "redirect:/registration?success";
     }
-
-
 }
