@@ -24,15 +24,15 @@ public class SpringSecurity {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/registration/**").permitAll()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/user").hasAnyRole("USER", "ADMIN")
-                .antMatchers("/admin").hasAnyRole("ADMIN")
+                .antMatchers("/login/**").permitAll()
+                .antMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .and()
                 .formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/user")
+                                .defaultSuccessUrl("/user/")
                                 .permitAll()
                 ).logout(
                         logout -> logout
