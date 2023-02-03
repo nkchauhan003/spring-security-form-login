@@ -1,0 +1,25 @@
+# JPA
+spring:
+  jpa:
+  properties:
+  hibernate:
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  ddl-auto: update
+  # MySql
+  datasource:
+    url: jdbc:mysql://localhost/spring-security-form-login
+    username: root
+    password: root
+    # Connection Pool
+    hikari:
+      connection-timeout: 20000
+      minimum-idle: 10
+      maximum-pool-size: 10
+      idle-timeout: 10000
+      max-lifetime: 1000
+      auto-commit: true
+
+
+
+
+
